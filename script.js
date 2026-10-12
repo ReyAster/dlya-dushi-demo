@@ -339,6 +339,7 @@ const flower = (function buildFlower() {
     document.getElementById("demo-note").hidden = false;
     document.getElementById("consent").hidden = true;
     document.getElementById("credits").hidden = false;
+    document.querySelectorAll(".demo-only").forEach((el) => { el.hidden = false; });
     form.querySelector(".done-text").textContent = "Это тестовая анкета: ваши ответы никуда не отправлены и нигде не сохранены.";
   }
 
