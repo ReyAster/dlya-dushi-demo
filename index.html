@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Для души, студия флористики</title>
+  <meta name="description" content="Авторские букеты, собранные под человека и повод. Студия флористики «Для души».">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="#top" aria-label="Для души, на главную">
+    <!-- Временный логотип: заменить файлом позже -->
+    <svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <path d="M12 21c-5-3-7.5-7-6-12 1.2-3.6 4.2-5.4 6-6.5 1.8 1.1 4.8 2.9 6 6.5 1.5 5-1 9-6 12z" fill="currentColor"/>
+    </svg>
+    <span class="logo-word">Для души</span>
+  </a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#about">О студии</a>
+    <a href="#bouquets">Букеты</a>
+    <a class="nav-cta" href="#order">Заказать</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <h1 class="reveal">Букеты, собранные <em>для души</em></h1>
+      <p class="lead reveal" style="--d:.12s">Студия флористики. Мы не раскладываем цветы по шаблону, а собираем каждый букет под человека, повод и настроение.</p>
+      <div class="hero-actions reveal" style="--d:.24s">
+        <a class="btn btn-wine" href="#order">Заказать букет</a>
+        <a class="link" href="#bouquets">Смотреть работы</a>
+      </div>
+    </div>
+    <figure class="hero-photo reveal" style="--d:.1s">
+      <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=1200&auto=format&fit=crop" alt="Букет из персиковых роз и зелени в крафтовой упаковке с лентой" fetchpriority="high">
+    </figure>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="reveal">Это не просто цветочный магазин</h2>
+    <ol class="about-list">
+      <li class="reveal">
+        <span class="num">01</span>
+        <h3>Букет под человека</h3>
+        <p>Сначала спрашиваем про того, кому дарите: что любит, как одевается, какой у него характер. Только потом берёмся за цветы.</p>
+      </li>
+      <li class="reveal" style="--d:.1s">
+        <span class="num">02</span>
+        <h3>Свежие цветы сезона</h3>
+        <p>Берём то, что красиво сейчас, и собираем так, чтобы букет простоял долго и не выглядел вчерашним.</p>
+      </li>
+      <li class="reveal" style="--d:.2s">
+        <span class="num">03</span>
+        <h3>Упаковка без лишнего</h3>
+        <p>Бумага, лента, немного зелени. Никакой плёнки с блёстками, которая спорит с цветами.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="gallery" id="bouquets" aria-labelledby="gallery-title">
+    <div class="gallery-head">
+      <h2 id="gallery-title" class="reveal">Что мы можем собрать</h2>
+      <p class="reveal" style="--d:.1s">Потяните карточку в сторону или нажмите на стрелки. Это примеры, у вашего букета будет своя история.</p>
+    </div>
+    <div class="decks" id="decks"></div>
+  </section>
+
+  <section class="order" id="order" aria-labelledby="order-title">
+    <div class="order-inner">
+      <div class="bloom-wrap" aria-hidden="true">
+        <svg id="flower" class="flower" viewBox="0 0 200 270" width="200" height="270"></svg>
+      </div>
+      <h2 id="order-title" class="reveal">Закажите уникальный букет своей мечты</h2>
+
+      <form id="quiz" class="quiz" novalidate>
+        <div class="quiz-progress" aria-hidden="true"><span id="qp-cur">01</span> / 04</div>
+        <div class="quiz-stage" id="stage" aria-live="polite">
+
+          <fieldset class="step" data-name="name">
+            <label for="f-name">Как вас зовут?</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Имя" maxlength="60">
+            <p class="err" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="step" data-name="phone">
+            <label for="f-phone">Номер телефона для связи</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 900 000 00 00" maxlength="24">
+            <p class="hint">Перезвоним или напишем в мессенджер, чтобы уточнить детали.</p>
+            <p class="err" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="step" data-name="palette">
+            <label for="f-palette">В какой гамме собрать букет?</label>
+            <input id="f-palette" name="palette" type="text" placeholder="Опишите своими словами" maxlength="120">
+            <div class="chips" role="group" aria-label="Быстрый выбор">
+              <button type="button" class="chip">Нежная пастель</button>
+              <button type="button" class="chip">Яркая и сочная</button>
+              <button type="button" class="chip">Белое и зелёное</button>
+              <button type="button" class="chip">Бордо и тёмные тона</button>
+              <button type="button" class="chip">Доверяю вам</button>
+            </div>
+            <p class="err" role="alert"></p>
+          </fieldset>
+
+          <fieldset class="step" data-name="date">
+            <label for="f-date">Когда нужен букет?</label>
+            <input id="f-date" name="date" type="text" placeholder="Например, 14 февраля к 18:00" maxlength="60">
+            <p class="err" role="alert"></p>
+          </fieldset>
+
+          <div class="step done" id="done" tabindex="-1">
+            <p class="done-title">Спасибо, <span id="done-name"></span></p>
+            <p class="done-text">Мы получили вашу анкету и скоро свяжемся, чтобы обсудить букет.</p>
+            <button type="button" class="btn btn-wine again" id="again" hidden>Заполнить заново</button>
+          </div>
+        </div>
+
+        <div class="quiz-actions" id="actions">
+          <button type="button" class="back" id="back" hidden>Назад</button>
+          <button type="submit" class="btn btn-wine" id="next">Дальше</button>
+        </div>
+        <p class="demo-note" id="demo-note" hidden>Это тестовая анкета для демонстрации. Данные никуда не отправляются и нигде не сохраняются.</p>
+        <p class="consent" id="consent">Отправляя анкету, вы соглашаетесь с <a href="oferta.html" target="_blank" rel="noopener">офертой</a> и <a href="privacy.html" target="_blank" rel="noopener">политикой обработки персональных данных</a>.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <a class="logo" href="#top" aria-label="Для души, наверх">
+    <svg class="logo-mark" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 21c-5-3-7.5-7-6-12 1.2-3.6 4.2-5.4 6-6.5 1.8 1.1 4.8 2.9 6 6.5 1.5 5-1 9-6 12z" fill="currentColor"/></svg>
+    <span class="logo-word">Для души</span>
+  </a>
+  <nav class="footer-links" aria-label="Документы">
+    <a href="oferta.html">Публичная оферта</a>
+    <a href="privacy.html">Политика обработки персональных данных</a>
+  </nav>
+  <p class="credits" id="credits" hidden>Демо-проект. Фото: Unsplash.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
