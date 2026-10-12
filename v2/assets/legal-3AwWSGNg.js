@@ -1,4 +1,4 @@
-import{f as e,h as t,m as n,n as r,p as i,t as a}from"./Footer-hGw9Fz1T.js";var o=t(n(),1),s=i(),c=e(),l={oferta:`  <p class="doc-note">Тестовый текст. Перед публикацией сайта его должен проверить юрист, а выделенные поля нужно заполнить своими данными.</p>\r
+import{f as e,h as t,m as n,n as r,p as i,t as a}from"./Footer-B4NESeS7.js";var o=t(n(),1),s=i(),c=e(),l={oferta:`  <p class="doc-note">Тестовый текст. Перед публикацией сайта его должен проверить юрист, а выделенные поля нужно заполнить своими данными.</p>\r
   <h1>Публичная оферта</h1>\r
   <p class="doc-date">об оказании услуг по изготовлению и продаже букетов. Редакция от 12 октября 2026 года</p>\r
 \r
